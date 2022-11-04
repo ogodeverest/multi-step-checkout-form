@@ -6,7 +6,7 @@ import useStepFormData from "@hooks/useStepFormData";
 import cards from "../CreditCards";
 
 function getCurrentCard(value: string) {
-  return value && creditCardType(value)[0].type;
+  return value && creditCardType(value)[0]?.type;
 }
 
 export default function Payment(): JSX.Element {
