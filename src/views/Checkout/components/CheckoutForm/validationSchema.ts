@@ -1,8 +1,7 @@
 import * as yup from "yup";
 import valid from "card-validator";
 
-const phoneRegEx: RegExp =
-  /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+const phoneRegEx: RegExp = /^\+?[1-9][0-9]{7,14}$/;
 
 const schema = yup
   .object()
