@@ -1,5 +1,5 @@
 import { Fragment, useCallback, useMemo, useState } from "react";
-import { useForm, FormProvider } from "react-hook-form";
+import { useForm, FormProvider, FieldValues } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import _ from "lodash";
 import {
@@ -80,9 +80,10 @@ export default function CheckoutForm({
     setActiveStep(index);
   }, []);
 
-  function handleSubmit() {
-    methods.handleSubmit(() => onSubmit(methods.getValues()))();
-  }
+  const handleSubmit = useCallback(
+    () => methods.handleSubmit((values: FieldValues) => onSubmit(values))(),
+    []
+  );
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLElement>) => {
