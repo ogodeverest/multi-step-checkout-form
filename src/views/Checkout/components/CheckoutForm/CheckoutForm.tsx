@@ -82,7 +82,7 @@ export default function CheckoutForm({
 
   const handleSubmit = useCallback(
     () => methods.handleSubmit((values: FieldValues) => onSubmit(values))(),
-    []
+    [methods.handleSubmit]
   );
 
   const handleKeyDown = useCallback(
