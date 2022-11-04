@@ -1,4 +1,86 @@
 
+# Multi step checkout form
+
+Modugen coding challenge.
+
+
+## Requriments:
+
+### 1. Form should have the following fields:
+
+- Personal Details
+  - Firstname and surname
+  - Email
+  - Phone number
+- Address
+   - Street and number
+   - Zipcode and city
+   - Country
+- Payment
+   - Credit card holder name
+   - Credit card number
+   - Expiry date
+   - Security code
+
+### 2. Functionality:
+
+- Each field is required and should be sensibly validated.
+- Each of the three steps should indicate in the overview if its containing fields are valid. 
+- The user should be able to switch between steps 
+- The user should not be able to submit the form if any field is invalid.
+- It should be clear from any step, which other steps need attention.
+## Run Locally:
+
+Clone the project
+
+```bash
+  git clone https://github.com/ogodeverest/multi-step-checkout-form.git
+```
+
+Go to the project directory
+
+```bash
+  cd multi-step-checkout-form
+```
+
+Install dependencies
+
+```bash
+  yarn install
+```
+
+Start the server
+
+```bash
+  yarn run dev
+```
+
+
+## Tech Stack
+
+ - **vite:** For build tool.
+ - **typescript**: For typed JavaScript.
+ - **React:** For UI library.
+ - **hookform**: For form state handling.
+ - **card-validator**:  For credit card form validation by braintree.
+ - **credit-cad-type**: For credit card dedection by braintree.
+ - **framer-motion**: For animations.
+ - **react-feather**: For icons.
+ - **react-toastify** : For toasters and notifications.
+ - **react-tooltip** : For tooltip component.
+ - **styled-components** : For styling.
+ - **yup** : For creating validation schemas.
+ - **prop-types** : For checking react prop types.
+
+
+  
+
+
+
+
+
+
+
 ## Documentation
 
 I considered the following while I coded this challenge:
@@ -57,5 +139,4 @@ Examples:
 - test: Holds test setup files and mocks.
 - views: Holds different app views that might also contain their own local components folder.
 - Barrell exports are used: A barrel enables to consolidate, or roll up, exports from multiple files or modules into one single module. Barrels streamline imports, simplify exports, and help to avoid a lot of clutter in the codebase.
-
 
