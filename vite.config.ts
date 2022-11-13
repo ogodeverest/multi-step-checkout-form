@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
+  base: "/multi-step-checkout-form/",
   plugins: [react()],
   resolve: {
     alias: {
