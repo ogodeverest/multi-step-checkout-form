@@ -1,7 +1,7 @@
 import { Fragment, useCallback, useMemo, useState } from "react";
 import { useForm, FormProvider, FieldValues } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import _ from "lodash";
+import { isEmpty } from "lodash";
 import {
   User,
   MapPin,
@@ -44,7 +44,7 @@ const stepData: Step[] = [
 ];
 
 interface CheckoutFormProps {
-  onSubmit: (data: object) => void;
+  onSubmit: (data: FieldValues) => void;
 }
 
 export default function CheckoutForm({
@@ -60,10 +60,10 @@ export default function CheckoutForm({
   const { errors } = methods.formState;
 
   const invalidSteps: boolean[] = stepData.map(
-    (step: Step) => !_.isEmpty(errors[step.id as keyof typeof errors])
+    (step: Step) => !isEmpty(errors[step.id as keyof typeof errors])
   );
 
-  const invalid: boolean = !_.isEmpty(errors);
+  const invalid: boolean = !isEmpty(errors);
 
   const isFirst: boolean = activeStep === 0;
   const isLast: boolean = activeStep === stepData.length - 1;
