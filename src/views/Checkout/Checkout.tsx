@@ -7,10 +7,6 @@ const StyledH1 = styled.h1`
   color: var(--clr-info);
 `;
 
-const StyledH2 = styled.h2`
-  color: var(--clr-dark);
-`;
-
 const StyledContainer = styled.main`
   ${flexColumn}
   gap: 4rem;
@@ -36,7 +32,6 @@ export default function Checkout(): JSX.Element {
     <StyledContainer>
       <header>
         <StyledH1>Checkout</StyledH1>
-        <StyledH2>Please finish your payment</StyledH2>
       </header>
       <CheckoutForm onSubmit={handleSubmit} />
       <ToastContainer
