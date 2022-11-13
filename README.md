@@ -1,7 +1,7 @@
 
 # Multi step checkout form
 
-Modugen coding challenge.
+Coding challenge.
 
 
 ## Requriments:
