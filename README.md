@@ -3,6 +3,10 @@
 
 Coding challenge.
 
+## Demo
+
+ - [Live Demo](https://ogodeverest.github.io/multi-step-checkout-form/)
+
 
 ## Requriments:
 
